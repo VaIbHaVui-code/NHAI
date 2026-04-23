@@ -1,0 +1,32 @@
+# ════════════════════════════════════════════════════
+# NHAI AI System — Python Dependencies
+# ════════════════════════════════════════════════════
+# Install all:  pip install -r requirements.txt
+# ════════════════════════════════════════════════════
+
+# ── Core (Required) ──────────────────────────────
+flask>=3.0
+flask-cors>=4.0
+requests>=2.31
+pydantic>=2.0
+numpy>=1.24
+
+# ── RAG Server (rag_server.py) ───────────────────
+langchain-openai>=0.1
+langchain-core>=0.2
+openai>=1.30                  # Whisper STT + TTS
+
+# ── YOLO Scanner (scanning_YOLO.py) ──────────────
+ultralytics>=8.2              # YOLOv8
+opencv-python>=4.8
+
+# ── Voice & Language Features ────────────────────
+gTTS>=2.5                     # Text-to-Speech (13 Indian languages)
+
+# ── Reports & Visualization ─────────────────────
+matplotlib>=3.8               # PDF report charts
+folium>=0.16                  # GPS heatmap HTML
+qrcode[pil]>=7.4              # QR code generation
+
+# ── Test Dashboard (test_app.py) ─────────────────
+# No extra deps — uses flask + requests (already listed above)

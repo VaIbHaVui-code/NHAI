@@ -1,0 +1,21 @@
+# --- Integration Logic (From Member 4) ---
+import sys
+import os
+# Ensure this script can see your 'integration' folder
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from integration.payload_manager import stitch_and_send
+# -----------------------------------------
+# Inside the YOLO loop where 'results' are processed:
+for result in results:
+    if result.boxes:
+        # 1. Get the data from the AI model
+        label = result.names[int(result.boxes[0].cls)]
+        conf = float(result.boxes[0].conf)
+        
+        # 2. Call the Stitcher (Provided by you!)
+        # Pass the current frame count and the AI's findings
+        stitch_and_send(
+            frame_id=frame_count, 
+            sign_type=label, 
+            contrast_ratio=1.65 # This will be their calculated Weber score
+        )

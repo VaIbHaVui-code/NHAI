@@ -1,0 +1,51 @@
+# -----------------------------
+# 1. Node.js & React Frontend
+# -----------------------------
+node_modules/
+dist/
+build/
+npm-debug.log
+.eslintcache
+
+# -----------------------------
+# 2. Python & AI Engine
+# -----------------------------
+__pycache__/
+*.pyc
+*.pyo
+venv/
+env/
+.venv/
+
+# -----------------------------
+# 3. Massive AI Weights & Data 
+# (CRITICAL: GitHub has a 100MB limit)
+# -----------------------------
+*.pt
+*.onnx
+runs/
+datasets/
+
+# -----------------------------
+# 4. Project Specific Outputs & Media
+# -----------------------------
+scans/
+qr_codes/
+*.mp4
+*.avi
+*.mov
+
+# -----------------------------
+# 5. Environment Variables & Secrets
+# (Never push Telegram tokens or DB passwords!)
+# -----------------------------
+.env
+.env.local
+.env.development
+.env.production
+
+# -----------------------------
+# 6. Operating System Junk
+# -----------------------------
+.DS_Store
+Thumbs.db
